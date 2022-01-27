@@ -1,20 +1,22 @@
 $(document).ready(function() {
-  $("form#insurance").submit(function(event) {
-    const age = parseInt($("input#age").val());
-    const gender = $("select#gender").val();
+  $("form#dating-quiz").submit(function(event) {
+    const food = ($("input#favorite-food").val());
+    if (food) {
 
-    if (age) {
-      let quote = (100 - age) * 3;
-      if (gender === 'male' && age < 26) {
-        quote += 50;
+      if ( food == "Pancakes"){
+        celebrity = "Dwayne Johnson"
+      } else if (food == "Rotisserie Chicken") {
+        celebrity = "Adam Driver"
+      } else {
+        celebrity = "Kevin Hart"
       }
 
-      $("#rate").text(quote);
-      $("#quote").show();
-    } else {
-      alert('Please enter your age.');
-    }
-
+  // User Input Logic
+  $("#match").submit(function(event) {
     event.preventDefault();
+    $(".celebrity").text(celebrity);
   });
+      // $("#celebrity").text(celebrity);
+      // $("#match").show();
+    });
 });

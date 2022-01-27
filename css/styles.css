@@ -2,6 +2,14 @@
   display: block;
 }
 
-#quote {
+#kevinHart {
+  display: none;
+}
+
+#dwayneJohnson {
+  display: none;
+}
+
+#adamDriver {
   display: none;
 }
