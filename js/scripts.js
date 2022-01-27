@@ -1,21 +1,17 @@
 $(document).ready(function() {
-  $("form#dating-quiz").submit(function(event) {
-    const food = $("input#favorite-food").val();
+  $("form#quiz").submit(function(event) {
+    const favoriteFood = $("select#favorite-food").val();
 
-      if ( food === "Pancakes"){
-        const celebrity = "Dwayne Johnson"
-      } else if (food === "rotisserie-chicken") {
-        const celebrity = "Adam Driver"
-      } else {
-        const celebrity = "Kevin Hart"
-      }
+    if (favoriteFood === "pancakes") {
+      alert("Dwayne Johnson");
+    } else if (favoriteFood === "buffalo-wings") {
+      alert("Kevin Hart");
+    } else {
+      alert("Adam Driver");
+    }
 
-  // User Input Logic
-  $("#match").submit(function(event) {
+    // favorite food auto reloads to default 
+    // buffallo chicken if below code isn't active
     event.preventDefault();
-    $(".celebrity").text(celebrity);
   });
-      // $("#celebrity").text(celebrity);
-      // $("#match").show();
-    });
 });
