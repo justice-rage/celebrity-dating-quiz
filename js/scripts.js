@@ -1,14 +1,13 @@
 $(document).ready(function() {
   $("form#dating-quiz").submit(function(event) {
-    const food = ($("input#favorite-food").val());
-    if (food) {
+    const food = $("input#favorite-food").val();
 
-      if ( food == "Pancakes"){
-        celebrity = "Dwayne Johnson"
-      } else if (food == "Rotisserie Chicken") {
-        celebrity = "Adam Driver"
+      if ( food === "Pancakes"){
+        const celebrity = "Dwayne Johnson"
+      } else if (food === "rotisserie-chicken") {
+        const celebrity = "Adam Driver"
       } else {
-        celebrity = "Kevin Hart"
+        const celebrity = "Kevin Hart"
       }
 
   // User Input Logic
